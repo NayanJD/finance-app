@@ -22,23 +22,23 @@ function App() {
         <div className="mt-[40px] h-fit grid justify-items-center">
           <DuidLogo />
         </div>
-        <div className="mt-[120px] h-fit grid pl-2 justify-items-center">
-          <HomeRouteLogo className="transition ease-in-out hover:scale-110" />
+        <div className="mt-[120px] h-fit rounded-md w-fit mx-auto grid p-2 justify-items-center transition ease-in-out hover:scale-150">
+          <HomeRouteLogo />
         </div>
-        <div className="mt-[20px] h-fit grid pl-2 justify-items-center">
-          <WalletLogo className="transition ease-in-out hover:scale-110" />
+        <div className="mt-[20px] h-fit rounded-md w-fit mx-auto grid p-2 justify-items-center transition ease-in-out hover:scale-150">
+          <WalletLogo />
         </div>
-        <div className="mt-[20px] h-fit grid pl-2 justify-items-center">
-          <CalendarLogo className="transition ease-in-out hover:scale-110" />
+        <div className="mt-[20px] h-fit rounded-md w-fit mx-auto grid p-2 justify-items-center transition ease-in-out hover:scale-150">
+          <CalendarLogo />
         </div>
-        <div className="mt-[20px] h-fit grid pl-2 justify-items-center">
-          <StatsLogo className="transition ease-in-out hover:scale-110" />
+        <div className="mt-[20px] h-fit rounded-md w-fit mx-auto grid p-2 justify-items-center transition ease-in-out hover:scale-150">
+          <StatsLogo />
         </div>
-        <div className="mt-[20px] h-fit grid pl-2 justify-items-center">
-          <MessagesLogo className="transition ease-in-out hover:scale-110" />
+        <div className="mt-[20px] h-fit rounded-md w-fit mx-auto grid p-2 justify-items-center transition ease-in-out hover:scale-150">
+          <MessagesLogo />
         </div>
-        <div className="mt-[20px] h-fit grid pl-2 justify-items-center">
-          <SettingsLogo className="transition ease-in-out hover:scale-110" />
+        <div className="mt-[20px] h-fit rounded-md w-fit mx-auto grid p-2 justify-items-center transition ease-in-out hover:scale-150">
+          <SettingsLogo />
         </div>
       </div>
       <div className="grow h-screen border-2 bg-creamyWhite"></div>
