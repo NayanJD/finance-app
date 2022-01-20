@@ -12,7 +12,7 @@ import { ReactComponent as ProfileImage } from "./assets/profileImage.svg";
 import { ReactComponent as DropdownLogo } from "./assets/dropdownLogo.svg";
 
 function App() {
-  const [isClicked, setIsClicked] = useState(true);
+  const [isClicked, setIsClicked] = useState(false);
 
   console.log("isClicked", isClicked);
   return (
@@ -40,26 +40,41 @@ function App() {
           <SettingsLogo />
         </div>
       </div>
-      <div className="grow w-screen sm:w-fit sm:h-screen bg-creamyWhite">
-        fadfad
+      <div
+        className={`grow border-2 border-black  justify-end px-2 w-screen sm:w-fit border-2 sm:h-screen bg-creamyWhite`}
+      ></div>
+      <div
+        className={`absolute sm:relative sm:flex-none ${
+          isClicked ? "sm:w-[400px] w-screen" : "w-0"
+        } h-screen sm:self-end bg-duidPurple transition-all ease-in-out duration-700`}
+      >
+        <div className="grid"></div>
       </div>
       <div
-        className={`hidden sm:flex-none  sm:block  ${
-          isClicked ? "w-[400px]" : "w-[0px]"
-        } h-screen  self-end bg-duidPurple transition-all ease-in-out`}
+        className={`${
+          isClicked ? "right-1/4 sm:right-44" : "right-8"
+        } absolute top-0 transition-all ease-in-out duration-700`}
       >
-        <div className="grid">
+        <div
+          className={`flex justify-between items-center rounded-full  ${
+            isClicked ? "w-[208px]" : "w-[45px]"
+          } sm:w-[208px] h-[40px] mt-[40px] ml-[20px] sm:pr-4 bg-gray-400 py-1 px-2 transition-all ease-in-out duration-700`}
+          onClick={() => setIsClicked(!isClicked)}
+        >
+          <div className="">
+            <ProfileImage className="bg-duidPurple rounded-full" />
+          </div>
           <div
-            className="flex justify-between items-center rounded-full w-[208px] h-[40px] mt-[40px] ml-[20px] pr-4 bg-gray-400 py-1 px-2"
-            onClick={() => setIsClicked(false)}
+            className={`text-white font-sans ${
+              isClicked
+                ? "opacity-100 delay-700 duration-700"
+                : "opacity-0 duration-150"
+            } sm:opacity-100 sm:block transition-opacity ease-in `}
           >
-            <div>
-              <ProfileImage className="bg-duidPurple rounded-full" />
-            </div>
-            <div className="text-white font-sans">Abraham Das</div>
-            <div>
-              <DropdownLogo />
-            </div>
+            Abraham Das
+          </div>
+          <div className={`${isClicked ? "" : "hidden"} sm:block`}>
+            <DropdownLogo />
           </div>
         </div>
       </div>
