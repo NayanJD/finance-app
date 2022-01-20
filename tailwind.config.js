@@ -8,6 +8,7 @@ module.exports = {
       creamyWhite: "#E5E5E5",
       iconDColor: "#554886",
       duidRed: "#F26675",
+      duidPurple: "#554886",
     },
     extend: {
       width: {
