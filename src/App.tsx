@@ -46,7 +46,7 @@ function App() {
         <div
           className={`grid ${
             isClicked ? "w-screen sm:w-[400px] bg-duidPurple" : "w-[100px]"
-          } h-full sm:h-screen justify-center  sm:justify-start sm:justify-self-end  transition-all ease-in-out duration-700`}
+          } h-full sm:h-screen justify-center  sm:justify-start sm:justify-self-end sm:px-2  transition-all ease-in-out duration-700`}
         >
           <div
             className={`flex justify-between items-center rounded-full  ${
