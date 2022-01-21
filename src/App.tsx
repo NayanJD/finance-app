@@ -45,12 +45,12 @@ function App() {
       >
         <div
           className={`grid ${
-            isClicked ? "w-screen sm:w-[400px] bg-duidPurple" : "w-[100px]"
-          } h-full sm:h-screen  sm:justify-start sm:justify-self-end  transition-all ease-in-out duration-700`}
+            isClicked ? "w-screen sm:w-[400px] bg-duidPurple" : "w-[50px]"
+          } h-full sm:h-screen justify-center  sm:justify-start sm:justify-self-end  transition-all ease-in-out duration-700`}
         >
           <div
             className={`flex justify-between items-center rounded-full  ${
-              isClicked ? "w-[208px] mx-auto" : "w-[45px]"
+              isClicked ? "w-[208px]" : "w-[45px]"
             }  mt-[40px] h-[40px] sm:pr-4 bg-gray-400 py-1 px-2 transition-all ease-in-out duration-700`}
             onClick={() => setIsClicked(!isClicked)}
           >
