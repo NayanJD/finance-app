@@ -16,7 +16,7 @@ function App() {
 
   console.log("isClicked", isClicked);
   return (
-    <div className="flex flex-wrap sm:flex-row flex-col-reverse h-screen  sm:items-start ">
+    <div className="flex flex-wrap sm:flex-row flex-col-reverse h-screen w-screen  sm:items-start ">
       <div className="border-2 w-screen sm:w-88px h-fit sm:h-screen flex sm:flex-none sm:flex-col  py-2 sm:py-0 overflow-auto">
         <div className="sm:block hidden mt-[20px] sm:mt-[40px] mx-auto w-fit h-fit grid justify-items-center">
           <DuidLogo />
@@ -41,11 +41,11 @@ function App() {
         </div>
       </div>
       <div
-        className={`grow border-2 grid grid-rows border-black w-full sm:w-fit border-2 sm:h-screen bg-creamyWhite`}
+        className={`grow grid grid-rows w-full sm:w-fit border-2 sm:h-screen bg-creamyWhite`}
       >
         <div
           className={`grid ${
-            isClicked ? "w-screen sm:w-[400px] bg-duidPurple" : "w-[50px]"
+            isClicked ? "w-screen sm:w-[400px] bg-duidPurple" : "w-[100px]"
           } h-full sm:h-screen justify-center  sm:justify-start sm:justify-self-end  transition-all ease-in-out duration-700`}
         >
           <div
