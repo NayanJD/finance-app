@@ -6,6 +6,7 @@ module.exports = {
     colors: {
       ...colors,
       creamyWhite: "#E5E5E5",
+      searchWhite: "#FBFAFF",
       iconDColor: "#554886",
       duidRed: "#F26675",
       duidPurple: "#554886",
