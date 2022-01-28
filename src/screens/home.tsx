@@ -11,7 +11,7 @@ function Home({ isClicked }: IHomeProps) {
     <div
       className={`sm:h-screen ${
         isClicked ? "w-0" : "grow"
-      } sm:grow flex flex-wrap flex-col transition-all ease-in-out duration-700`}
+      } sm:grow flex flex-col transition-all ease-in-out duration-700`}
     >
       <div className="grid grid-rows-2 sm:grid-cols-2 h-fit sm:h-[52px] m-[10px] sm:m-[40px]">
         <div>
@@ -26,12 +26,15 @@ function Home({ isClicked }: IHomeProps) {
           />
         </div>
       </div>
-      <div className="border border-black grid mx-[40px] p-[32px] flex flex-wrap flex-col">
+      <div className="mx-[10px] p-[10px] sm:mx-[40px] sm:p-[32px] flex flex-col">
         <div className="grid grid-flow-col">
           <div className="font-sans font-semibold text-2xl">Overview</div>
           <div className="grid justify-end">
             <Dropdown options={["2022", "2021", "2019"]} />
           </div>
+        </div>
+        <div className="mt-[10px] font-sans font-light">
+          Keep using your money wisely
         </div>
       </div>
     </div>

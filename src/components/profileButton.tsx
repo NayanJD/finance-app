@@ -22,7 +22,7 @@ const ProfileButton = ({ isClicked, onClick }: IProfileButtonProps) => {
         className={`text-white font-sans ${
           isClicked
             ? "opacity-100 delay-700 duration-700"
-            : "opacity-0 duration-150"
+            : "opacity-0 duration-150 hidden"
         } transition-opacity ease-in `}
       >
         Abraham Das
