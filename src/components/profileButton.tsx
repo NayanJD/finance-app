@@ -12,7 +12,7 @@ const ProfileButton = ({ isClicked, onClick }: IProfileButtonProps) => {
     <div
       className={`flex justify-between items-center rounded-full  ${
         isClicked ? "w-[208px]" : "w-[45px]"
-      }  mt-[10px] sm:mt-[40px] h-[40px] sm:pr-4 bg-gray-400 py-1 px-2 transition-all ease-in-out duration-700`}
+      } h-[40px] sm:pr-4 bg-gray-400 py-1 px-2 transition-all ease-in-out duration-700`}
       onClick={() => onClick()}
     >
       <div className="">

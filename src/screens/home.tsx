@@ -12,7 +12,7 @@ function Home({ isClicked }: IHomeProps) {
         isClicked ? "w-0" : "grow"
       } sm:grow flex transition-all ease-in-out duration-700`}
     >
-      <div className="grid grid-rows-2 sm:grid-cols-2 h-fit sm:h-[52px] m-[10px] sm:m-[40px] items-center">
+      <div className="grid grid-rows-2 sm:grid-cols-2 h-fit sm:h-[52px] m-[10px] sm:m-[40px]">
         <div>
           <div className="font-sans font-semibold text-lg">Hello Abraham</div>
           <div className="font-sans font-light">How are you today?</div>
