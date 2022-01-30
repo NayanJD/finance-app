@@ -122,7 +122,7 @@ function Home({ isClicked }: IHomeProps) {
                 Increase on the month 2.79%
               </div>
             </div>
-            <div className="grid grid-cols-2 h-full mt-[10px]">
+            <div className="flex flex-row h-full mt-[10px]">
               <div className="grid grid-rows hidden sm:grid">
                 <div className="">
                   <div className="font-sans text-lg text-duidPurple">2.53%</div>
@@ -144,7 +144,7 @@ function Home({ isClicked }: IHomeProps) {
                   <div className="inline-block text-sm font-sans">Jajan</div>
                 </div>
               </div>
-              <div>
+              <div className="grow grid justify-center">
                 <RadialChart data={radialData} />
               </div>
             </div>

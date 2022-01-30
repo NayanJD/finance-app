@@ -13,7 +13,7 @@ export default function Dropdown({ options }: IDropdownProp) {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
-    <Menu as="div" className="relative inline-block text-left">
+    <Menu as="div" className="relative inline-block text-left z-40">
       <div>
         <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-duidRed">
           {options[selectedIndex]}
@@ -47,60 +47,6 @@ export default function Dropdown({ options }: IDropdownProp) {
                 )}
               </Menu.Item>
             ))}
-            {/* <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "block px-4 py-2 text-sm"
-                  )}
-                >
-                  Account settings
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "block px-4 py-2 text-sm"
-                  )}
-                >
-                  Support
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "block px-4 py-2 text-sm"
-                  )}
-                >
-                  License
-                </a>
-              )}
-            </Menu.Item>
-            <form method="POST" action="#">
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    type="submit"
-                    className={classNames(
-                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "block w-full text-left px-4 py-2 text-sm"
-                    )}
-                  >
-                    Sign out
-                  </button>
-                )}
-              </Menu.Item>
-            </form> */}
           </div>
         </Menu.Items>
       </Transition>
