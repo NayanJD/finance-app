@@ -16,7 +16,7 @@ function Dashboard() {
           <Route path="/" element={<Home isClicked={isClicked} />} />
         </Routes>
         <div
-          className={`absolute top-0 right-0 sm:relative grid grid-rows ${
+          className={`absolute top-0 right-0 lg:relative grid grid-rows ${
             isClicked
               ? "w-screen sm:w-[400px] bg-duidPurple"
               : "w-[52px] sm:w-[100px]"

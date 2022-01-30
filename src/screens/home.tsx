@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { SearchIcon } from "@heroicons/react/solid";
 import { ReactComponent as Dot } from "../assets/bulletDot.svg";
+
 import Dropdown from "../components/dropdown";
 
 import RadialChart from "../components/radialChart";
@@ -95,10 +96,11 @@ function Home({ isClicked }: IHomeProps) {
           <div className="font-sans font-semibold text-lg">Hello Abraham</div>
           <div className="font-sans font-light">How are you today?</div>
         </div>
-        <div className="mt-[10px] sm:mt-[0px]">
+        <div className="mt-[10px] sm:mt-[0px] flex flex-wrap flex-row items-center bg-searchWhite h-[48px] rounded-full focus-within:border-2 focus-within:border focus-within:border-duidRed transition-all ease-in-out duration-700">
+          <SearchIcon height={20} fill="#727272" className="pl-[20px]" />
           <input
             type="text"
-            className="bg-searchWhite w-full h-[48px] rounded-full px-3 outline-none focus:outline-duidRed transition-all ease-in-out duration-700"
+            className="bg-searchWhite grow rounded-full outline-none  px-3"
             placeholder="Search"
           />
         </div>
