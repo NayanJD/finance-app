@@ -95,7 +95,7 @@ function Home({ isClicked }: IHomeProps) {
           <div className="font-sans font-semibold text-lg">Hello Abraham</div>
           <div className="font-sans font-light">How are you today?</div>
         </div>
-        <div>
+        <div className="mt-[10px] sm:mt-[0px]">
           <input
             type="text"
             className="bg-searchWhite w-full h-[48px] rounded-full px-3 outline-none focus:outline-duidRed transition-all ease-in-out duration-700"
