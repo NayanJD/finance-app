@@ -78,19 +78,19 @@ function Home({ isClicked }: IHomeProps) {
       name: "40-49",
       uv: 90,
       pv: 3908,
-      fill: "#a4de6c",
+      fill: "url(#colorGradient0)",
     },
     {
       name: "50+",
       uv: 85,
       pv: 4800,
-      fill: "#554886",
+      fill: "url(#colorGradient1)",
     },
     {
       name: "unknow",
       uv: 81,
       pv: 4800,
-      fill: "#F26675",
+      fill: "url(#colorGradient2)",
     },
   ];
   const BAR_GAP = 2;
@@ -124,7 +124,7 @@ function Home({ isClicked }: IHomeProps) {
         <div className="mt-[10px] font-sans font-light">
           Keep using your money wisely
         </div>
-        <div className="grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 mt-[10px]">
+        <div className="grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 mt-[10px]">
           <div className="min-width-[400px] overflow-auto">
             <BarChart
               width={400}
@@ -210,23 +210,50 @@ function Home({ isClicked }: IHomeProps) {
                   startAngle={90}
                   endAngle={-270}
                 >
-                  {/* <PolarRadiusAxis
-                    type="number"
-                    domain={[0, 100]}
-                    dataKey={"uv"}
-                  /> */}
                   <PolarAngleAxis
                     type="number"
                     domain={[0, 100]}
                     angleAxisId={0}
                     tick={false}
                   />
+                  <defs>
+                    <linearGradient
+                      id="colorGradient0"
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="1"
+                      gradientTransform="rotate(-90)"
+                    >
+                      <stop offset="5%" stopColor="#F35C98" stopOpacity={1} />
+                      <stop offset="95%" stopColor="#EFEFEF" stopOpacity={1} />
+                    </linearGradient>
+                    <linearGradient
+                      id="colorGradient1"
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="1"
+                      gradientTransform="rotate(-90)"
+                    >
+                      <stop offset="5%" stopColor="#554886" stopOpacity={1} />
+                      <stop offset="95%" stopColor="#EFEFEF" stopOpacity={1} />
+                    </linearGradient>
+                    <linearGradient
+                      id="colorGradient2"
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="1"
+                      gradientTransform="rotate(-90)"
+                    >
+                      <stop offset="5%" stopColor="#F26675" stopOpacity={1} />
+                      <stop offset="95%" stopColor="#EFEFEF" stopOpacity={1} />
+                    </linearGradient>
+                  </defs>
                   <RadialBar
                     className=""
-                    // minAngle={15}
-                    // label={{ fill: "#666", position: "insideEnd" }}
                     background
-                    // clockWise={true}
                     dataKey="uv"
                     data={radialData}
                     radius={10}
@@ -236,18 +263,9 @@ function Home({ isClicked }: IHomeProps) {
 
                   <Legend
                     iconSize={10}
-                    // width={120}
-                    // height={140}
                     layout="vertical"
-                    // horizOriginX={50}
                     verticalAlign="middle"
                     align="center"
-                    // margin={{
-                    //   top: 50,
-                    //   left: 50,
-                    //   right: 50,
-                    //   bottom: 50,
-                    // }}
                     content={() => (
                       <span className="text-2xl font-sans font-bold">80%</span>
                     )}
