@@ -11,7 +11,7 @@ function Dashboard() {
   return (
     <div className="flex sm:flex-row flex-col-reverse h-screen w-screen  sm:items-start ">
       <SideMenu />
-      <div className={`grow flex w-screen sm:h-screen bg-creamyWhite`}>
+      <div className={`grow flex w-screen sm:h-screen bg-creamyWhite h-0`}>
         <Routes>
           <Route path="/" element={<Home isClicked={isClicked} />} />
         </Routes>
