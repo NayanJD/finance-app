@@ -16,11 +16,11 @@ function Dashboard() {
           <Route path="/" element={<Home isClicked={isClicked} />} />
         </Routes>
         <div
-          className={`grid grid-rows ${
+          className={`absolute top-0 right-0 sm:relative grid grid-rows ${
             isClicked
               ? "w-screen sm:w-[400px] bg-duidPurple"
               : "w-[52px] sm:w-[100px]"
-          } sm:h-screen justify-center  sm:justify-start sm:px-2  transition-all ease-in-out duration-700`}
+          } h-screen sm:h-screen justify-center  sm:justify-start sm:px-2  transition-all ease-in-out duration-700`}
         >
           <div className="mt-[10px] sm:mt-[40px] h-[52px] grid items-center">
             <ProfileButton
