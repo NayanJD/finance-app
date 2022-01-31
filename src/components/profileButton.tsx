@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ReactComponent as ProfileImage } from "../assets/profileImage.svg";
 import { ReactComponent as DropdownLogo } from "../assets/dropdownLogo.svg";
+import { useAppSelector } from "../hooks/store";
 
 interface IProfileButtonProps {
   isClicked: boolean;
@@ -8,6 +9,10 @@ interface IProfileButtonProps {
 }
 
 const ProfileButton = ({ isClicked, onClick }: IProfileButtonProps) => {
+  const user = useAppSelector((state) => state.user);
+
+  const userFullName = [user.firstName, user.lastName].join(" ");
+
   return (
     <div
       className={`flex justify-between items-center rounded-full  ${
@@ -25,7 +30,7 @@ const ProfileButton = ({ isClicked, onClick }: IProfileButtonProps) => {
             : "opacity-0 duration-150 hidden"
         } transition-opacity ease-in `}
       >
-        Abraham Das
+        {userFullName}
       </div>
       <div className={`${isClicked ? "" : "hidden"}`}>
         <DropdownLogo />

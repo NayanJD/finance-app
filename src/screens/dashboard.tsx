@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 
+import { useAppSelector } from "../hooks/store";
 import ProfileButton from "../components/profileButton";
 import SideMenu from "../components/sideMenu";
-import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import Home from "./home";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 
 function Dashboard() {
+  const user = useAppSelector((state) => state.user);
+
+  const userFullName = [user.firstName, user.lastName].join(" ");
+
   const [isClicked, setIsClicked] = useState(false);
 
   return (
