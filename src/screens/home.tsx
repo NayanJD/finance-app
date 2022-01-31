@@ -6,84 +6,17 @@ import Dropdown from "../components/dropdown";
 
 import RadialChart from "../components/radialChart";
 import BarChart from "../components/barChart";
+import useStat, { useYears } from "../hooks/stat";
 
 interface IHomeProps {
   isClicked: boolean;
 }
 
 function Home({ isClicked }: IHomeProps) {
-  const data = [
-    {
-      name: "Jun",
-      uv: 100,
-      pv: -48,
-      max: 150,
-      min: -50,
-    },
-    {
-      name: "Jul",
-      uv: 148,
-      pv: -20,
-      max: 150,
-      min: -50,
-    },
-    {
-      name: "Aug",
-      uv: 100,
-      pv: -30,
-      max: 150,
-      min: -50,
-    },
-    {
-      name: "Sep",
-      uv: 55,
-      pv: -10,
-      max: 150,
-      min: -50,
-    },
-    {
-      name: "Oct",
-      uv: 125,
-      pv: -48,
-      max: 150,
-      min: -50,
-    },
-    {
-      name: "Nov",
-      uv: 110,
-      pv: -25,
-      max: 150,
-      min: -50,
-    },
-    {
-      name: "Dec",
-      uv: 95,
-      pv: -25,
-      max: 150,
-      min: -50,
-    },
-  ];
+  const yearOptions = useYears();
 
-  const radialData = [
-    {
-      name: "40-49",
-      uv: 90,
-      pv: 3908,
-      fill: "url(#colorGradient0)",
-    },
-    {
-      name: "50+",
-      uv: 85,
-      pv: 4800,
-      fill: "url(#colorGradient1)",
-    },
-    {
-      name: "unknow",
-      uv: 81,
-      pv: 4800,
-      fill: "url(#colorGradient2)",
-    },
-  ];
+  const [yearIndex, setYearIndex] = useState(0);
+  const { barChartData, radialChartData } = useStat(yearOptions[yearIndex]);
 
   return (
     <div
@@ -109,14 +42,18 @@ function Home({ isClicked }: IHomeProps) {
         <div className="grid grid-flow-col">
           <div className="font-sans font-semibold text-2xl">Overview</div>
           <div className="grid justify-end">
-            <Dropdown options={["2022", "2021", "2019"]} />
+            <Dropdown
+              options={yearOptions.map((year) => year.toString())}
+              selectedValue={yearOptions[yearIndex].toString()}
+              callback={(selectedYear) => setYearIndex(selectedYear)}
+            />
           </div>
         </div>
         <div className="mt-[10px] font-sans font-light">
           Keep using your money wisely
         </div>
         <div className="grid grid-rows-1 lg:grid-rows-1 lg:grid-cols-2 mt-[10px] items-center">
-          <BarChart data={data} />
+          <BarChart data={barChartData} />
           <div className="grid">
             <div>
               <div className="text-xl font-extrabold font-sans">In and Out</div>
@@ -147,7 +84,7 @@ function Home({ isClicked }: IHomeProps) {
                 </div>
               </div>
               <div className="grow grid justify-center">
-                <RadialChart data={radialData} />
+                <RadialChart data={radialChartData} />
               </div>
             </div>
           </div>

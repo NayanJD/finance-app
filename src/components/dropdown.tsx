@@ -8,8 +8,10 @@ function classNames(...classes: string[]) {
 
 interface IDropdownProp {
   options: string[];
+  selectedValue: string;
+  callback: (index: number) => void;
 }
-export default function Dropdown({ options }: IDropdownProp) {
+export default function Dropdown({ options, callback }: IDropdownProp) {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
@@ -33,7 +35,12 @@ export default function Dropdown({ options }: IDropdownProp) {
         <Menu.Items className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="py-1">
             {options.map((option, index) => (
-              <Menu.Item onClick={() => setSelectedIndex(index)}>
+              <Menu.Item
+                onClick={() => {
+                  setSelectedIndex(index);
+                  callback(index);
+                }}
+              >
                 {({ active }) => (
                   <a
                     href="#"
